@@ -1,0 +1,17 @@
+batch_size = 32
+window_size = int(64) 
+validation_size = 2976 
+test_size = 2976 
+ma_periods = 14 
+epochs = 200
+ticker = 'btcusd' #gbpusd #'apple10-17'
+start_date = '2017-01-01' 
+seed = 42 
+model_path = f'models/{ticker}-{batch_size}-{window_size}-{ma_periods}'
+scaler_path = f'scalers/{ticker}-{batch_size}-{window_size}-{ma_periods}.bin'
+full_time_series_path = f'data/{ticker}.csv'
+train_time_series_path = f'data/{ticker}-train.csv'
+validate_time_series_path = f'data/{ticker}-validate.csv'
+test_time_series_path = f'data/{ticker}-test.csv'
+abs_pips = float(0.008)
+pred_size = 5
